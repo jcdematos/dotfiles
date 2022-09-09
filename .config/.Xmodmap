@@ -1,0 +1,7 @@
+clear Lock
+keycode 66 = Hyper_L
+add mod4 = Hyper_L
+keycode 135 = Multi_key
+keycode 36 = Return backslash 
+keycode 22 = BackSpace bar
+
