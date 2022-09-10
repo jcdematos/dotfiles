@@ -46,29 +46,13 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-bindsym $mod+g split h
-bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
-
 bindsym $mod+space focus mode_toggle
 
-#set $workq "0:&#xf1e4; Terminals"
-#set $work1 "1:&#xf269; Browser" 
-#set $work2 "2:&#xf02d; Notetaking"
-#set $work3 "3:&#xf19c; Books"
-#set $work4 "4:&#xf11c; Programming"
-#set $work5 "5:&#xf121; References"
-#set $work6 "6:&#xf03d; Classes"
-#set $work7 "7:&#xf0f4; Writing"
-#set $work8 "8:&#xf01c; E-mail"
-#set $work9 "9:&#xf02d; Man"
-#set $work0 "10:&#xf001; Musica"
-
-bindsym $mod+quotedbl workspace number 0
 bindsym $mod+1 workspace number 1; move workspace to output HDMI-A-0 
 bindsym $mod+2 workspace number 2; move workspace to output HDMI-A-0
 bindsym $mod+3 workspace number 3; move workspace to output HDMI-A-0
@@ -85,7 +69,6 @@ bindsym $mod+dead_acute  workspace next
 bindsym $mod+bracketleft move workspace to output HDMI-A-0
 bindsym $mod+bracketright move workspace to output DVI-D-0
 
-bindsym $mod+Shift+quotedbl move container to workspace number 0
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
 bindsym $mod+Shift+3 move container to workspace number 3
@@ -97,9 +80,9 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-bindsym $mod+Shift+dead_circumflex move container to workspace prev
-bindsym $mod+Shift+dead_grave move container to workspace next
 bindsym $mod+semicolon exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+bindsym $mod+apostrophe exec dworkspace
+bindsym $mod+Shift+apostrophe exec "dworkspace move"
 
 mode "Resize" {
         bindsym l resize shrink width 10 px or 10 ppt
