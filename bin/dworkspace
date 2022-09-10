@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+workspace=$(i3-msg -t get_workspaces | jq -r .[].name | dmenu -p "Workspace:")
+if [ "$1" = "move" ]
+then
+	i3-msg move container to workspace $workspace
+else
+	i3-msg workspace $workspace
+fi

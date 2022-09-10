@@ -1,0 +1,8 @@
+#!/bin/bash
+# Hide terminal window for certain programs
+program=$@
+wid=$(xdotool getactivewindow)
+xdotool windowunmap $wid
+$@ &
+wait $!
+xdotool windowmap $wid
