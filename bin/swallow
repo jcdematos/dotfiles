@@ -3,6 +3,6 @@
 program=$@
 wid=$(xdotool getactivewindow)
 xdotool windowunmap $wid
-$@ &
+"$@" &
 wait $!
 xdotool windowmap $wid
