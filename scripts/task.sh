@@ -1,4 +1,4 @@
-output_file=$PWD/scripts/.bashrc.d/task_contexts.bash
+output_file=$HOME/scripts/.bashrc.d/task_contexts.bash
 echo "alias context='clear && task context'" > $output_file
 echo "alias none='task context none'" >> $output_file
 while read -r line; do
