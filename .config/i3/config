@@ -68,8 +68,8 @@ bindsym $mod+0 workspace number 10; move workspace to output DVI-D-0
 bindsym $mod+dead_tilde  workspace prev
 bindsym $mod+dead_acute  workspace next
 
-bindsym $mod+bracketleft move workspace to output HDMI-A-0
-bindsym $mod+bracketright move workspace to output DVI-D-0
+bindsym $mod+bracketleft move workspace to output left
+bindsym $mod+bracketright move workspace to output right
 
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
