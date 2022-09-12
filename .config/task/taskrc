@@ -1,0 +1,12 @@
+taskd.certificate=~/.config/task/private.certificate.pem
+taskd.key=~/.config/task/private.key.pem
+taskd.ca=~/.config/task/ca.crt
+taskd.server=inthe.am:53589
+taskd.credentials=inthe_am/jc.de.mts/19a3a0e2-638c-4057-8c27-cce2b2fcc635
+taskd.trust=strict
+
+regex=on
+
+data.location=~/.config/task
+
+include ./contexts
