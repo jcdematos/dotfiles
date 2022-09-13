@@ -9,4 +9,4 @@ regex=on
 
 data.location=~/.config/task
 
-include ./contexts
+include ~/.config/task/contexts
