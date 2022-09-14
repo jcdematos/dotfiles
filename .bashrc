@@ -16,7 +16,7 @@ git_branch() {
 }
 user="\e[1;34m\u\e[m"
 folder="\[\033[0;32m\][\w]\[\033[m\]"
-export PS1="$folder $user \[\e[2;91m\]\$(git_branch) \[\e[00m\]"
+export PS1="$folder $user \[\e[2;91m\]\$(git_branch) \[\e[00m\]"
 
 PROMPT_DIRTRIM=2 # file depth on ps1
 
