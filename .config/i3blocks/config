@@ -43,6 +43,6 @@ separator=true
 markup=pango
 
 [date]
-command=date '+ %V %a, %d/%b/%Y %k:%M'
+command=date '+ %V %a, %d/%b %k:%M'
 interval=5
 

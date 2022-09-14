@@ -1,0 +1,5 @@
+#!/bin/bash
+window_pid=$(xdotool getactivewindow)
+window=$(xdotool getwindowname $window_pid)
+window=${window:0:50}
+echo -e "<span background='#61afef' foreground='#282c34'> $window </span>\n"
