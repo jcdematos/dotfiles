@@ -8,11 +8,15 @@ esac
 set -o vi
 
 git_branch() {
-     git branch --show 2> /dev/null
+     branch=$(git branch --show 2> /dev/null)
+     if [ "$branch" != "" ];
+     then
+	     echo " $branch "
+     fi
 }
 user="\e[1;34m\u\e[m"
 folder="\[\033[0;32m\][\w]\[\033[m\]"
-export PS1="$folder $user \[\e[2;91m\]\$(git_branch)\[\e[00m\] $ "
+export PS1="$folder $user \[\e[2;91m\]\$(git_branch) \[\e[00m\]"
 
 PROMPT_DIRTRIM=2 # file depth on ps1
 

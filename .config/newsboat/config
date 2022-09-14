@@ -29,6 +29,6 @@ bind-key x pb-delete
 
 macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
 macro i set browser "firefox" ; open-in-browser ; set browser linkhandler
-macro y set browser "echo $1  >> ~/Dados/Youtube/NewsboatFeed" ; open-in-browser ; set browser linkhandler
+macro y set browser "echo $1  >> ~/Dados/Youtube/YoutubeFeed" ; open-in-browser ; set browser linkhandler
 macro s set browser "echo $1  >> ~/Dados/Youtube/SoundCloundFeed" ; open-in-browser ; set browser linkhandler
 macro c set browser "echo $1 | xclip -i" ; open-in-browser ; set browser linkhandler

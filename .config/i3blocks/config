@@ -46,3 +46,6 @@ markup=pango
 command=date '+ %V %a, %d/%b %k:%M'
 interval=5
 
+[news]
+interval=30
+markup=pango
