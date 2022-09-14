@@ -33,6 +33,7 @@ bindsym $mod+minus gaps inner all minus 1
 
 bindsym $mod+d exec  dmenu_run -fn "monospace-11" -p "RUN :" -nb "$dblack" -nf "$dwhite" -sb "$dgreen" -sf "$dblack" 
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+p exec flameshot gui
 
 bindsym $mod+q kill
 
