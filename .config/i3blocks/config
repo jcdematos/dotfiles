@@ -1,0 +1,48 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+##PRINT SCREEN
+#bindsym Print exec maim '%Y-%m-%d-%s%wx$h.png' -e 'mv $f ~/Screenshots/'
+#bindsym Print exec maim ~/imagens/screens/$(date +%d-%m-%Y-%s).png -s
+# use flameshot
+#bindsym Shift+Print exec maim '%Y-%m-%d-%s%wx$h.png' -e 'mv $f ~/Screenshots/' -u -b
+
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=~/.config/i3blocks/$BLOCK_NAME
+separator=false
+full_text=|
+align=center
+separator_block_width=7
+#separator_block_width=5
+#markup=none
+[focusedwindow]
+interval=1
+separator=true
+markup=pango
+
+[date]
+command=date '+ %V %a, %d/%b/%Y %k:%M'
+interval=5
+
