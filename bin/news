@@ -1,6 +1,11 @@
-pip3 install -U yt-dlp
+#!/bin/bash
+# Use this small script to automate download youtube and other video
+# streaming services channels and standalone vídeos. 
+# Using syncthing to sync this to my cellphone or other device to 
+# watch them.
 youtube_path=$1
+echo "$(date)" > $youtube_path/.lastrun
 cat $youtube_path/Channels > $youtube_path/Youtube
 cat $youtube_path/YoutubeFeed >> $youtube_path/Youtube
-yt-dlp -a "$youtube_path/Youtube" --download-archive $youtube_path/YoutubeDL -o "$youtube_path/%(uploader)s/%(upload_date)s - %(title)s.%(ext)s" -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' -i --force-ipv4
+yt-dlp -a "$youtube_path/Youtube" --download-archive $youtube_path/YoutubeDL -o "$youtube_path/%(uploader)s/%(upload_date)s - %(title)s.%(ext)s" -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' -i --force-ipv4 >> $youtube_path/.lastrun
 
