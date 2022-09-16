@@ -1,5 +1,6 @@
 # .bashrc
 # If not running interactively, don't do anything
+
 case $- in
     *i*) ;;
       *) return;;
@@ -14,9 +15,10 @@ git_branch() {
 	     echo " $branch "
      fi
 }
-user="\e[1;34m\u\e[m"
-folder="\[\033[0;32m\][\w]\[\033[m\]"
-export PS1="$folder \[\e[2;91m\]\$(git_branch) \[\e[00m\]"
+user="\e[1;34m\u\e[m\]"
+folder="\[\e[1;32m\][\w]\[\e[m\]"
+git="\[\e[2;91m\]$(git_branch) \[\e[m\]"
+export PS1="$folder $git"
 
 PROMPT_DIRTRIM=2 # file depth on ps1
 
