@@ -17,7 +17,7 @@
 - ripgrep
 - clifm
 - fontawesome-fonts
-- scrcpy
+- adb, scrcpy
 
 ## Others
 - Doom for Emacs
