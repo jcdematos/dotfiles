@@ -122,6 +122,7 @@ bar {
 	}
 }
 
+exec_always alacritty -e bash ~/scripts/start.sh
 #bindsym $mod+F9 exec xsetwacom set "Wacom Bamboo 2FG 6x8 Finger touch" touch off
 #bindsym $mod+Shift+F9 exec xsetwacom set "Wacom Bamboo 2FG 6x8 Finger touch" touch on
 #bindsym $mod+Shift+i exec bash ~/Scripts/input.sh
