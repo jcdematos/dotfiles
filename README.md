@@ -6,7 +6,10 @@
 - [dmenu](https://github.com/operadicmaniac/dmenu) - Launcher and dynamic menu for X11.
 ## Packages 
 ```sh
-i3-gaps, i3blocks, picom, dmenu, feh, xcape, git, neovim, emacs, alacritty, konsole, zathura, python3, python3-pip, mvp, yt-dlp, ffmpeg, tmux, task, khal, vdirsyncer, newsboat, firefox, krita, krita, jq, syncthing, ripgrep, clifm, fontawesome-fonts, adb, scrcpy
+i3-gaps, i3blocks, picom, dmenu, feh, xcape, git, neovim, emacs, alacritty, 
+konsole, zathura, python3, python3-pip, mvp, yt-dlp, ffmpeg, tmux, task, khal, 
+vdirsyncer, newsboat, firefox, krita, krita, jq, syncthing, ripgrep, clifm, 
+fontawesome-fonts, adb, scrcpy
 ```
 
 ## Others
