@@ -37,13 +37,9 @@ align=center
 separator_block_width=7
 #separator_block_width=5
 #markup=none
-#[focusedwindow]
-#interval=1
-#separator=true
-#markup=pango
 
 [date]
-command=date '+ %V %a, %d/%b %k:%M'
+command=date '+%V %a, %d/%b %k:%M'
 interval=5
 
 [news]
