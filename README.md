@@ -1,9 +1,11 @@
 # dotfiles
 ## Details
 - [i3-gaps](https://github.com/Airblader/i3) - Extensible tiling window manager for X11.
-- [i3blocks](https://github.com/Airblader/i3) - A feed generator for text based status bars meant to be displayed by i3. 
+- [i3blocks](https://github.com/vivien/i3blocks) - A feed generator for text based status bars meant to be displayed by i3. 
+- [picom](https://github.com/yshui/picom) - Compositor for X11 forked from Compton.
+- [dmenu](https://github.com/operadicmaniac/dmenu) - Launcher and dynamic menu for X11.
 ## Packages 
-- i3, i3blocks, picom, dmenu, feh, xcape
+- feh, xcape
 - git
 - neovim, emacs
 - alacritty or konsole
