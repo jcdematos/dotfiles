@@ -1,9 +1,15 @@
 #!/bin/bash
 set -e
-workspace=$(i3-msg -t get_workspaces | jq -r .[].name | dmenu -p "Workspace:")
+
+if test -f "$XDG_CACHE_HOME/wal/colors.sh"
+then
+	source "$XDG_CACHE_HOME/wal/colors.sh"
+fi
+
+workspace=$(i3-msg -t get_workspaces | jq -r .[].name | dmenu -p "WORKSPACE:" -fn "monospace-11" -nb "$color0" -nf "$color15" -sb "$color4" -sf "$color0")
 if [ "$1" = "move" ]
 then
-	i3-msg move container to workspace $workspace
+	i3-msg move container to workspace $workspace $col
 else
 	i3-msg workspace $workspace
 fi
