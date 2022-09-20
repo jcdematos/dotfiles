@@ -37,6 +37,8 @@ align=center
 separator_block_width=7
 #separator_block_width=5
 #markup=none
+[volume]
+interval=5
 
 [date]
 command=date '+%V %a, %d/%b %k:%M'

@@ -1,0 +1,11 @@
+#!/bin/bash
+state=$(amixer sget Master | grep Left: | awk -F'[][]' '{ print $4 }')
+
+if [ "$state" = "off" ]
+then
+	echo ""
+else
+	volume=$(amixer sget Master | grep Left: | awk -F'[][]' '{print $2 }')
+	echo " $volume"
+fi
+
