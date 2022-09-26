@@ -24,13 +24,22 @@ new_git_branch() {
      fi
 
 }
+
+ssh_session() {
+	if test -z "$SSH_TTY"
+	then
+		echo ""
+	else
+		echo -e "\[\e[1;34m@$(hostname)\e[m\]"
+	fi
+}
 compensate=20 # compensates for colors and special prompt commands
-user="\e[1;34m\u\e[m\]"
+user="\e[41;1;34m\u\e[m\]"
 folder="\[\e[1;32m\][\w]\[\e[m\]"
-psprompt="\[\e[1;34m\]\[\e[m\]"
+psprompt="\[\e[40;1;34m\] \[\e[m\]"
 
 prompt() {
-	PS1=$(printf "%*s\r%s\n$psprompt " "$(($(tput cols)+${compensate}))" "$(new_git_branch)" "$folder")
+	PS1=$(printf "%*s\r%s\n$psprompt " "$(($(tput cols)+${compensate}))" "$(new_git_branch)" "$folder $(ssh_session)")
 }
 PROMPT_COMMAND=prompt
 
