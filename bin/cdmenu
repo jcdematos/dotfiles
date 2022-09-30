@@ -1,5 +1,5 @@
 #!/bin/bash
-# If there's colors cache, set them on dmenu
+# dmenu with pywal colors
 set -e
 
 if test -f "$XDG_CACHE_HOME/wal/colors.sh"

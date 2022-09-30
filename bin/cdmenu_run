@@ -1,0 +1,12 @@
+#!/bin/bash
+# dmenu_run with pywal colors
+set -e
+
+if test -f "$XDG_CACHE_HOME/wal/colors.sh"
+then
+	source "$XDG_CACHE_HOME/wal/colors.sh"
+	dmenu_run -nb "$color0" -nf "$color15" -sb "$color4" -sf "$color0" "$@"
+else 
+	dmenu_run "$@"
+fi
+
