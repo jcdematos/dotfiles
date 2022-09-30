@@ -1,0 +1,12 @@
+#!/bin/bash
+# If there's colors cache, set them on dmenu
+set -e
+
+if test -f "$XDG_CACHE_HOME/wal/colors.sh"
+then
+	source "$XDG_CACHE_HOME/wal/colors.sh"
+	dmenu -nb "$color0" -nf "$color15" -sb "$color4" -sf "$color0" "$@"
+else 
+	dmenu "$@"
+fi
+
