@@ -31,7 +31,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+equal gaps inner all plus 1
 bindsym $mod+minus gaps inner all minus 1
 
-bindsym $mod+d exec cdmenu -fn "monospace-11" -p "RUN :" 
+bindsym $mod+d exec cdmenu -fn "monospace-11" -p "RUN:" 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+p exec flameshot gui
 
