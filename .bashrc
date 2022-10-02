@@ -8,42 +8,8 @@ esac
 
 set -o vi
 
-git_branch() {
-     branch=$(git branch --show 2> /dev/null)
-     if [ "$branch" != "" ];
-     then
-	     echo " $branch "
-     fi
-}
-
-new_git_branch() {
-     branch=$(git branch --show 2> /dev/null)
-     if [ "$branch" != "" ];
-     then
-	     echo -e "\[\e[2;91m\] $branch \[\e[m\]"
-     fi
-
-}
-
-ssh_session() {
-	if test -z "$SSH_TTY"
-	then
-		echo ""
-	else
-		echo -e "\[\e[1;34m@$(hostname)\e[m\]"
-	fi
-}
-compensate=20 # compensates for colors and special prompt commands
-user="\e[41;1;34m\u\e[m\]"
-folder="\[\e[1;32m\][\w]\[\e[m\]"
-psprompt="\[\e[40;1;34m\] \[\e[m\]"
-
-prompt() {
-	PS1=$(printf "%*s\r%s\n$psprompt " "$(($(tput cols)+${compensate}))" "$(new_git_branch)" "$folder $(ssh_session)")
-}
-PROMPT_COMMAND=prompt
-
-PROMPT_DIRTRIM=2 # file depth on ps1
+# Get promtp configuration
+source ~/scripts/.bashrc.d/prompt.sh
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
