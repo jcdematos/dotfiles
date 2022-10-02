@@ -17,7 +17,7 @@ then
 	sudo dnf copr enable fuhrmann/i3-gaps -y
 
 	echo "Install packages"
-	sudo dnf install i3-gaps i3blocks git neovim mpv emacs zathura alacritty python3  python3-pip  task picom newsboat firefox krita jq dmenu tmux feh syncthing fontawesome5-fonts adb scrcpy ripgrep khal fd-find nodejs hugo -y
+	sudo dnf install i3-gaps i3blocks git neovim mpv emacs zathura alacritty python3  python3-pip  task picom newsboat firefox krita jq dmenu tmux feh syncthing fontawesome5-fonts adb scrcpy ripgrep khal fd-find nodejs hugo ShellCheck -y
 fi
 
 if [ ! -f "$HOME/.emacs.d/bin/doom" ]
