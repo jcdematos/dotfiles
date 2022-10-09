@@ -13,7 +13,7 @@ bind-key k up
 bind-key j next articlelist
 bind-key k prev articlelist 
 bind-key J next-feed articlelist
-bind-key K next-feed articlelist
+bind-key K prev-feed articlelist
 bind-key G end
 bind-key g home
 bind-key d pagedown
