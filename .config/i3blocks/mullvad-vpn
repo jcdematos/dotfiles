@@ -1,0 +1,37 @@
+#!/bin/bash
+# Get information about Mullvad VPN status and outputs the Country and City
+# being used if active, shows VPN inactive otherwise, and accepts a click to 
+# start using the VPN.
+
+CODE_FORMAT=${CODE_FORMAT:-"cca2"}
+json_data=$(curl https://am.i.mullvad.net/json)
+active=$(echo "$json_data" | jq '.mullvad_exit_ip')
+
+if [ "$active" == "true" ];
+then
+	city=$(echo "$json_data" | jq '.city' | tr -d '"')
+	country=$(echo "$json_data" | jq '.country' | tr -d '"')
+
+	case "${CODE_FORMAT}" in
+	cca2|ccn3|cca3|cioc)
+		country_code=$(curl https://restcountries.com/v3.1/name/"$country?fields=$CODE_FORMAT" | jq ".[0].${CODE_FORMAT}" | tr -d '"')
+		;;
+	full)
+		country_code=$country
+		;;
+	*)
+		echo "ERROR: Invalid code format use: cca2, ccn3, cca3, cioc or full."
+		exit 1
+		;;
+	esac
+	echo "$country_code $city"
+else
+	if [ $button ]; 
+	then
+		mullvad connect
+		echo "Trying to connect..."
+	else
+		echo "VPN inactive"
+	fi
+
+fi

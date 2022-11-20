@@ -37,12 +37,18 @@ align=center
 separator_block_width=7
 #separator_block_width=5
 #markup=none
+[mullvad-vpn]
+interval=30
+markup=pango
+CODE_FORMAT=cca2
+
 [volume]
 interval=5
 
 [date]
 command=date '+%V %a, %d/%b %k:%M'
 interval=5
+
 
 [news]
 interval=30
