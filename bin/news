@@ -7,5 +7,4 @@ youtube_path=$1
 echo "$(date)" > $youtube_path/.lastrun
 cat $youtube_path/Channels > $youtube_path/Youtube
 cat $youtube_path/YoutubeFeed >> $youtube_path/Youtube
-yt-dlp -a "$youtube_path/Youtube" --download-archive $youtube_path/YoutubeDL -o "$youtube_path/%(uploader)s/%(upload_date)s - %(title)s.%(ext)s" -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' -i --force-ipv4 >> $youtube_path/.lastrun
-
+yt-dlp -a "$youtube_path/Youtube" --download-archive $youtube_path/YoutubeDL --dateafter 20221001 -o "$youtube_path/%(uploader)s/%(upload_date)s - %(title)s.%(ext)s" -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' -i --force-ipv4 >> $youtube_path/.lastrun
