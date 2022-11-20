@@ -1,4 +1,7 @@
 #!/bin/bash
+bind "set show-mode-in-prompt on"
+bind "set vi-ins-mode-string ins "
+bind "set vi-cmd-mode-string cmd "
 
 git_branch() {
      branch=$(git branch --show 2> /dev/null)
@@ -18,7 +21,7 @@ folder="\[\e[1;32m\][\w]\[\e[m\]"
 psprompt="\[\e[40;1;34m\] \[\e[m\]"
 
 prompt() {
-	PS1=$(printf "%*s\r%s\n$(python_venv)$psprompt " "$(($(tput cols)+${compensate}))" "$(git_branch)" "$folder $(ssh_session)")
+	PS1=$(printf "%*s\r%s\n$(python_venv) $psprompt " "$(($(tput cols)+${compensate}))" "$(git_branch)" "$folder $(ssh_session)")
 }
 
 PROMPT_COMMAND=prompt
