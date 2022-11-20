@@ -50,3 +50,4 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ERRFILE="$XDG_CACHE_HOME/X11/xsession-erros"
 export TASKRC=~/.config/task/taskrc
 export TERMINAL=alacritty
+export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
