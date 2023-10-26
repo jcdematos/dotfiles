@@ -132,7 +132,6 @@ bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
-
 set $lock i3lock -i ~/images/lock.png && sleep 1
 set $default mode "default"
 set $power_mode (l) lock, (e) logout, (s) suspend, (r) reboot, (S) power off
@@ -147,6 +146,24 @@ mode "$power_mode" {
 }
 bindsym XF86HomePage mode "$power_mode"
 
+set $mouse_mode mouse_mode
+mode "$mouse_mode" {
+    bindsym h exec xdotool mousemove_relative -- -10 0
+    bindsym j exec xdotool mousemove_relative -- 0 10
+    bindsym k exec xdotool mousemove_relative -- 0 -10
+    bindsym l exec xdotool mousemove_relative -- 10 0
+    bindsym ç exec "xdotool mousedown 1; xdotool mouseup 1"
+
+    bindsym Shift+h exec xdotool mousemove_relative -- -100 0
+    bindsym Shift+j exec xdotool mousemove_relative -- 0 100
+    bindsym Shift+k exec xdotool mousemove_relative -- 0 -100
+    bindsym Shift+l exec xdotool mousemove_relative -- 100 0
+
+    bindsym Return $default
+    bindsym Escape $default
+}
+bindsym F9 mode "$mouse_mode"
+
 for_window [window_role="About"] floating enable
 for_window [window_role="Organizer"] floating enable
 for_window [window_role="Preferences"] floating enable
@@ -158,3 +175,5 @@ for_window [window_role="toolbox"] floating enable
 for_window [window_role="webconsole"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
+
+
