@@ -12,6 +12,7 @@ wait_window() {
 
 if [ -f ~/.config/.Xmodmap ]; then
     xmodmap ~/.config/.Xmodmap
+    xmodmap ~/.config/.Xmodmap
 else
     echo "The Xmodmap file doen't existe"
 fi
