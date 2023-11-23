@@ -14,7 +14,7 @@ if [ -f ~/.config/.Xmodmap ]; then
     xmodmap ~/.config/.Xmodmap
     xmodmap ~/.config/.Xmodmap
 else
-    echo "The Xmodmap file doen't existe"
+    echo "The Xmodmap file doen't exist"
 fi
 
 which xcape >> /dev/null
