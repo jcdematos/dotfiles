@@ -132,7 +132,7 @@ bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
-set $lock i3lock -i ~/images/lock.png && sleep 1
+set $lock lockscreen ~/images/steampunk/ ~/images/lock.png
 set $default mode "default"
 set $power_mode (l) lock, (e) logout, (s) suspend, (r) reboot, (S) power off
 mode "$power_mode" {
