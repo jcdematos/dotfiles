@@ -1,0 +1,11 @@
+source=$1
+dest=$2
+
+i3lock -i "$dest" && sleep 1
+
+RESOLUTION="$(xdpyinfo | grep dimensions | cut -d' ' -f7)"
+
+[ -f "$dest" ] && rm "$dest"
+
+image=$(ls "$source"* | sort -R | tail -1)
+convert -scale "$RESOLUTION"^ "$image" "$dest"
