@@ -6,7 +6,9 @@ case $- in
       *) return;;
 esac
 
-set -o vi
+if [[ ! -v VIMRUNTIME ]]; then
+	set -o vi
+fi
 
 # Get promtp configuration
 source ~/scripts/.bashrc.d/prompt.sh
@@ -52,3 +54,6 @@ export ERRFILE="$XDG_CACHE_HOME/X11/xsession-erros"
 export TASKRC=~/.config/task/taskrc
 export TERMINAL=alacritty
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
+export EDITOR=nvim
+
+eval "$(thefuck --alias)"
