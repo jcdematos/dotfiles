@@ -23,7 +23,8 @@ For fedora:
 sudo dnf install i3-gaps i3blocks git neovim mpv emacs zathura alacritty python3 python3-pip task \
 picom newsboat firefox jq dmenu tmux feh syncthing fontawesome-fonts-all ripgrep \
 khal fd-find gcc make pkgconfig libX11-devel libXtst-devel libXi-devel xdotool golang \
-unclutter-xfixes -y
+unclutter-xfixes flameshot jupyterlab -y
+thefuck tldr
 ```
 
 ### others
