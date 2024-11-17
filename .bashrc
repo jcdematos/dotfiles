@@ -55,5 +55,3 @@ export TASKRC=~/.config/task/taskrc
 export TERMINAL=alacritty
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
 export EDITOR=nvim
-
-eval "$(thefuck --alias)"
