@@ -18,3 +18,9 @@ alias yt-mp3-playlist="youtube-dl --ignore-erros --extract-audio --audio-format 
 
 alias wiki="vim ~/wiki/docs/"
 alias org="vim ~/org/"
+
+function mkcd() {
+    path=$1
+    mkdir -p $1
+    cd $1
+}

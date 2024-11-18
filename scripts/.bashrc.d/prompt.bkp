@@ -5,7 +5,7 @@ bind "set vi-cmd-mode-string cmd "
 
 git_branch() {
      branch=$(git branch --show 2> /dev/null)
-     [ "$branch" != "" ] && echo -e "\[\e[2;91m\] $branch \[\e[m\]" || echo -e "\[\e[2;91m\] None\[\e[m\]"
+     [ "$branch" != "" ] && echo -e "\[\e[2;91m\] $branch \[\e[m\]"
 }
 
 ssh_session() {
@@ -17,16 +17,16 @@ python_venv() {
 }
 
 aws_profile() {
-	[ "$AWS_PROFILE" != "" ] && echo -e "\[\e[1;34m\]  $AWS_PROFILE\[\e[m\]" || echo -e "\[\e[1;34m\]  None\[\e[m\]"
+	[ "$AWS_PROFILE" != "" ] && echo -e "\[\e[1;34m\]  $AWS_PROFILE\[\e[m\]"
 }
 
-compensate=40
+compensate=20 # compensates for colors and special prompt commands
 folder="\[\e[1;32m\][\w]\[\e[m\]"
 psprompt="\[\e[40;1;34m\] \[\e[m\]"
 
 prompt() {
-	#PS1=$(printf "%*s\r%s\n$(python_venv) $psprompt " "$(($(tput cols)+${compensate}))" "$(git_branch)" "$folder $(ssh_session)")
-	PS1=$(printf "%*s\r%s\n$(python_venv) $psprompt " "$(($(tput cols)+${compensate}))" "$(aws_profile) $(git_branch)" "$folder $(ssh_session)")
+	PS1=$(printf "%*s\r%s\n$(python_venv) $psprompt " "$(($(tput cols)+${compensate}))" "$(git_branch)" "$folder $(ssh_session)")
+	#PS1=$(printf "%*s\r%s\n$(python_venv) $psprompt " "$(($(tput cols)+${compensate}))" "$(aws_profile) $(git_branch)" "$folder $(ssh_session)")
 }
 
 PROMPT_COMMAND=prompt
