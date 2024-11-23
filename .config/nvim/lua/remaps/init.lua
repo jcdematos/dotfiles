@@ -27,14 +27,14 @@ vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious);
 vim.keymap.set("n", "<leader>bc", vim.cmd.lclose)
 
 -- FZF
-vim.keymap.set("n", "<leader>fzf", vim.cmd.Files)
-vim.keymap.set("n", "<leader>fzfr", function() 
+vim.keymap.set("n", "<leader>ff", vim.cmd.Files)
+vim.keymap.set("n", "<leader>fr", function() 
 	vim.cmd('Files' .. " " .. fzf_current_folder())
 end)
-vim.keymap.set("n", "<leader>fzb", vim.cmd.Buffers)
-vim.keymap.set("n", "<leader>fzl", vim.cmd.BLines)
+vim.keymap.set("n", "<leader>fb", vim.cmd.Buffers)
+vim.keymap.set("n", "<leader>fl", vim.cmd.BLines)
 
-vim.keymap.set("n", "<leader>fzg", function() 
+vim.keymap.set("n", "<leader>fg", function() 
 	vim.cmd('GFiles?')
 end)
-vim.keymap.set("n", "<leader>fzgc", vim.cmd.Commits)
+vim.keymap.set("n", "<leader>fgc", vim.cmd.Commits)
