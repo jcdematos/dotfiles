@@ -1,0 +1,35 @@
+[alias]
+    # doc
+    aliases = config --get-regexp alias
+    # short hands
+    p = push
+    a = add
+    aa = add .
+    s = status
+
+    lol = log --oneline --decorate
+    graph = log --oneline --graph --decorate
+    pset = push --set-upstream origin
+    dateflog = reflog --date=iso
+    wdiff = diff --word-diff
+
+[color.decorate]
+    branch = green
+    HEAD = "#ff00ff" bold
+
+[grep]
+    lineNumber = true
+    patternType = perl # or extended
+
+[merge]
+    conflicstyle = diff3 
+
+[rerere] 
+    enabled = true 
+
+[core]
+    excludefiles = /home/jmatos/
+
+[core] 
+    excludesfile = /home/jmatos/.config/git/.gitignore
+
