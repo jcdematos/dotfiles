@@ -5,6 +5,7 @@
     p = push
     a = add
     aa = add .
+    af = add --force
     s = status
 
     lol = log --oneline --decorate
