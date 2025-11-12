@@ -1,5 +1,12 @@
 # .bashrc
 # If not running interactively, don't do anything
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 case $- in
     *i*) ;;
@@ -20,11 +27,12 @@ fi
 
 # User specific environment
 export GOPATH="$(go env GOPATH)"
+export CARGOPATH=$HOME/.cargo/bin
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-export PATH="${PATH}:${GOPATH}/bin"
+export PATH="${PATH}:${GOPATH}/bin:$CARGOPATH"
 
 # User specific aliases and functions
 if [ -d ~/scripts/.bashrc.d ]; then
