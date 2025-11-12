@@ -1,8 +1,4 @@
-alias gsts='git status'
-alias gl='git log'
 
-alias ga='git add'
-alias gaa='git add .'
 function gam {
 	files=$(git status | grep modified | awk '{print $2}')
 	git add $files
