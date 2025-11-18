@@ -1,4 +1,5 @@
 #!/bin/bash
+# Move a container to a different workspace using dmenu
 set -e
 
 workspace=$(i3-msg -t get_workspaces | jq -r .[].name | cdmenu -p "WORKSPACE:" -fn "monospace-11")
