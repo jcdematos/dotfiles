@@ -1,0 +1,20 @@
+option=$(printf ' Power Off\n Suspend\n Lock Screen\n Logout' | wofi --dmenu --location 2 --columns 4 -H 50)
+
+case "$option" in
+    " Power Off")
+        notify-send 'Shuting down in 5 seconds' 
+        sleep 5
+        systemctl poweroff
+        ;;
+    " Suspend")
+        notify-send 'Suspending down in 5 seconds' 
+        sleep 5
+        systemctl suspend
+        ;;
+    " Lock Screen")
+        loginctl lock-session
+        ;;
+    " Logout")
+        loginctl terminate-session
+        ;;
+esac
