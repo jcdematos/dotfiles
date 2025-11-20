@@ -1,0 +1,27 @@
+[config.wallpaper] 
+command = "hyprpaper"
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.hyprland]
+input_path = './templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = './templates/waybar-colors.conf'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.mako]
+input_path = './templates/mako-colors.conf'
+output_path = '~/.config/mako/mako-colors'
+post_hook = 'makoctl reload'
+
+[templates.rofi]
+input_path = './templates/rofi-colors.conf'
+output_path = '~/.config/wofi/colors.rasi'
+
