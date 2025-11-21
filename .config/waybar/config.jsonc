@@ -184,8 +184,8 @@
     // Choose the order of the modules
     "modules-left": [
         "idle_inhibitor",
-        "power-profiles-daemon",
-        "network"
+        "power-profiles-daemon"
+        //"network"
     ],
     "modules-center": [
         "hyprland/workspaces"
