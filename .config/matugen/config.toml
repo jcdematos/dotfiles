@@ -12,7 +12,7 @@ output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
 [templates.waybar]
-input_path = './templates/waybar-colors.conf'
+input_path = './templates/css-colors.conf'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
@@ -21,7 +21,6 @@ input_path = './templates/mako-colors.conf'
 output_path = '~/.config/mako/mako-colors'
 post_hook = 'makoctl reload'
 
-[templates.rofi]
-input_path = './templates/rofi-colors.conf'
-output_path = '~/.config/wofi/colors.rasi'
-
+[templates.wofi]
+input_path = './templates/css-colors.conf'
+output_path = '~/.config/wofi/colors.css'
