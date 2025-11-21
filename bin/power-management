@@ -1,4 +1,4 @@
-option=$(printf ' Power Off\n Suspend\n Lock Screen\n Logout' | wofi --dmenu --location 2 --columns 4 -H 50)
+option=$(printf ' Power Off\n Suspend\n Lock Screen\n Logout' | wofi --dmenu --location 2 --columns 1 -H 50 --height 100% --width 100% --yoffset -40)
 
 case "$option" in
     " Power Off")
